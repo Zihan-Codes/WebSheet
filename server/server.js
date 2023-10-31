@@ -13,7 +13,7 @@ connectDB();
 
 app.use(
   cors({
-    origin: ["http://localhost:3000"],
+    origin: ["https://web-sheet-1rsa.vercel.app/"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
