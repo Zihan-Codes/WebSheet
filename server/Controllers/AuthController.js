@@ -7,16 +7,11 @@ const jwt = require("jsonwebtoken");
 module.exports.Signup = async (req, res, next) => {
     try {
         const { fullname, password, username, role, createdAt } = req.body;
-        console.log(req.body);
-        console.log(fullname);
-        console.log(username);
-        console.log(role);
 
         const existingUser = await User.findOne({ username: username });
         if (existingUser) {
           return res.json({ message: "User already exists" });
         }
-        console.log("call")
         const user = await User.create({fullname, password, username, role, createdAt });
     
         const token = createSecretToken(user._id);
