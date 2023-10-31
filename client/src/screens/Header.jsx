@@ -7,16 +7,16 @@ function Header() {
     const navigate = useNavigate();
     const [cookies, removeCookie] = useCookies([]);
 
-    useEffect(() => {
-        const verifyCookie = async () => {
-          if (!cookies.token) {
-            navigate("/login");
-          }
+    // useEffect(() => {
+    //     const verifyCookie = async () => {
+    //       if (!cookies.token) {
+    //         navigate("/login");
+    //       }
           
     
-        };
-        verifyCookie();
-      }, [cookies, navigate, removeCookie]);
+    //     };
+    //     verifyCookie();
+    //   }, [cookies, navigate, removeCookie]);
 
   const handleLogout = () => {
     removeCookie("token");
