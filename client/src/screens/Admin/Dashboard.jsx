@@ -27,7 +27,7 @@ const Dashboard = () => {
 
   const fetchUser = async () => { // getting all users
     try {
-      const response = await axios.get("http://localhost:5000/get-users");
+      const response = await axios.get("https://web-sheet.vercel.app/get-users");
       const { data } = response;
       setUsers(data.allusers);
       console.log(data);
@@ -41,7 +41,7 @@ const Dashboard = () => {
 
     // e.preventDefault();
     try {
-      const response = await axios.get(`http://localhost:5000/tb/table-edit/${tableId}`);
+      const response = await axios.get(`https://web-sheet.vercel.app/tb/table-edit/${tableId}`);
       const { data } = response;
       // console.log(data);
       // console.log(data.tabledata)
@@ -61,7 +61,7 @@ const Dashboard = () => {
       if(password === cpassword) {
         const inputData = {username: username, role: role, password: password, fullname: fullname};
 
-      const { data } =await axios.post("http://localhost:5000/signup", {username: username, role: role, password: password, fullname: fullname}, {withCredentials: true});
+      const { data } =await axios.post("https://web-sheet.vercel.app/signup", {username: username, role: role, password: password, fullname: fullname}, {withCredentials: true});
 
         const { success, message } = data;
       if (success) {

@@ -33,7 +33,8 @@ const TableData = () => {
 
   const fetchTable = async () => { // getting all users
     try {
-      const response = await axios.get("http://localhost:5000/tb/table");
+      // const response = await axios.get("http://localhost:5000/tb/table");
+      const response = await axios.get("https://web-sheet.vercel.app/tb/table");
       const { data } = response;
       setTable(data.tableData);
       console.log(data.tableData);
@@ -53,7 +54,8 @@ const TableData = () => {
     setTableIds(null);
     // e.preventDefault();
     try {
-      const response = await axios.get(`http://localhost:5000/tb/table-edit/${tableId}`);
+      // const response = await axios.get(`http://localhost:5000/tb/table-edit/${tableId}`);
+      const response = await axios.get(`https://web-sheet.vercel.app/tb/table-edit/${tableId}`);
       const { data } = response;
       // console.log(data);
       // console.log(data.tabledata)
@@ -78,7 +80,7 @@ const TableData = () => {
     try {
       const inputData = {col1: col1, col2: col2, col3: col3, col4: col4, col5: col5, tableIds: tableIds};
       if(checkupdate === 1){
-        const { data } =await axios.post("http://localhost:5000/tb/update-table", {inputData}, {withCredentials: true});
+        const { data } =await axios.post("https://web-sheet.vercel.app/tb/update-table", {inputData}, {withCredentials: true});
 
         const { success, message } = data;
       if (success) {
@@ -89,7 +91,7 @@ const TableData = () => {
         console.log("not update")
       }
       } else {
-        const { data } =await axios.post("http://localhost:5000/tb/savetable", {inputData}, {withCredentials: true});
+        const { data } =await axios.post("https://web-sheet.vercel.app/tb/savetable", {inputData}, {withCredentials: true});
 
         const { success, message } = data;
       if (success) {

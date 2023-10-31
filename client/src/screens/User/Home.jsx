@@ -20,7 +20,7 @@ const Uhome = () => {
 
   const fetchTable = async () => { // getting all users
     try {
-      const response = await axios.get("http://localhost:5000/tb/table");
+      const response = await axios.get("https://web-sheet.vercel.app/tb/table");
       const { data } = response;
       setTable(data.tableData);
       console.log(data.tableData);
