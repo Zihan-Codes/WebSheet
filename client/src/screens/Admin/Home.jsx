@@ -10,18 +10,18 @@ const Home = () => {
     // const [cookies, removeCookie] = useCookies([]);
     const [cookies] = useCookies(['token']);
 
-    useEffect(() => {
-        const verifyCookie = async () => {
-          if (!cookies.token) {
-            navigate("/login");
-          }
-          console.log("no any token")
-          console.log(cookies.token)
+    // useEffect(() => {
+    //     const verifyCookie = async () => {
+    //       if (!cookies.token) {
+    //         navigate("/login");
+    //       }
+    //       console.log("no any token")
+    //       console.log(cookies.token)
           
     
-        };
-        verifyCookie();
-      }, [cookies, navigate]);
+    //     };
+    //     verifyCookie();
+    //   }, [cookies, navigate]);
 
     return(
         <Container>
