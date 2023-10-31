@@ -4,7 +4,7 @@ const { MONGO_URL } = process.env;
 
 const connectDB = async () => {
   try {
-        await mongoose.connect(MONGO_URL, {
+        await mongoose.connect("mongodb+srv://zihanwplans:XNUEyEsZqh4PfmT9@cluster0.4krs4bg.mongodb.net/websheet?retryWrites=true&w=majority", {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     //   useCreateIndex: true,
