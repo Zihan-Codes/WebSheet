@@ -2,7 +2,7 @@ const express = require('express');
 const connectDB = require('./db');
 require("dotenv").config();
 const cors = require("cors");
-const { PORT } = process.env;
+const  PORT  = process.env.PORT || 5000;
 const authRoute = require("./Routes/AuthRoute");
 const tableRoute = require("./Routes/TableRoute");
 
@@ -13,7 +13,7 @@ connectDB();
 
 app.use(
   cors({
-    origin: ["http://web-sheet.vercel.app"],
+    origin: ["http://localhost:3000"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
