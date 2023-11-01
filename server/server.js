@@ -14,7 +14,7 @@ connectDB();
 
 const corsOptions = {
   origin: "https://web-sheet-1rsa.vercel.app", // Replace with your front-end's actual origin
-  methods: ["GET", "POST", "PUT", "DELETE"],
+  // methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true, // Important when dealing with credentials
 };
 
