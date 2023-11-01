@@ -19,7 +19,7 @@ module.exports.Signup = async (req, res, next) => {
         // const token = dummyToken();
 
         function createToken(userId) {
-          return jwt.sign({ id: userId }, process.env.TOKEN_KEY, { expiresIn: '1h' });
+          return jwt.sign({ id: userId }, "5f39bf14ed835883c0bf17ca41947f4c5a9cf2cd58bfa70861947c8d91778ab5", { expiresIn: '1h' });
         }
         const token = createToken(user._id);
 
