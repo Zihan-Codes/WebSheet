@@ -59,9 +59,13 @@ module.exports.Login = async (req, res, next) => {
       return res.json({message:'Incorrect password or username' }); 
     }
 
-    const token = createSecretToken(user._id);
+    // const token = createSecretToken(user._id);
         // const dummyToken = () => "staticTokenString";
         // const token = dummyToken();
+        function createToken(userId) {
+          return jwt.sign({ id: userId }, process.env.TOKEN_KEY, { expiresIn: '1h' });
+        }
+        const token = createToken(user._id);
     
     res.cookie("token", token, {
       withCredentials: true,
