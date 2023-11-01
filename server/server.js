@@ -21,7 +21,14 @@ app.use(
 
 // Middleware
 app.use(express.json());
-app.use(cors());
+// app.use(cors());
+const corsOptions = {
+  origin: 'https://web-sheet-1rsa.vercel.app', // Replace with your frontend domain
+  optionsSuccessStatus: 200,
+  credentials: true, // If your frontend needs to send cookies
+};
+app.use(cors(corsOptions));
+
 
 app.use("/", authRoute);
 app.use("/tb", tableRoute);
