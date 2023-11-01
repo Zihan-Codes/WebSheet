@@ -15,8 +15,13 @@ module.exports.Signup = async (req, res, next) => {
         const user = await User.create({fullname, password, username, role, createdAt });
     
         // const token = createSecretToken(user._id);
-        const dummyToken = () => "staticTokenString";
-        const token = dummyToken();
+        // const dummyToken = () => "staticTokenString";
+        // const token = dummyToken();
+
+        function createToken(userId) {
+          return jwt.sign({ id: userId }, process.env.TOKEN_KEY, { expiresIn: '1h' });
+        }
+        const token = createToken(user._id);
 
     
         res.cookie("token", token, {
