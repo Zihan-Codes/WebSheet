@@ -12,14 +12,6 @@ const app = express();
 connectDB();
 
 
-// app.use(
-//   cors({
-//     origin: ["https://web-sheet-1rsa.vercel.app"],
-//     methods: ["GET", "POST", "PUT", "DELETE"],
-//     credentials: true,
-//   })
-// );
-
 const corsOptions = {
   origin: "https://web-sheet-1rsa.vercel.app", // Replace with your front-end's actual origin
   methods: ["GET", "POST", "PUT", "DELETE"],
@@ -30,9 +22,6 @@ app.use(cors(corsOptions));
 
 // Middleware
 app.use(express.json());
-
-
-
 
 
 app.use("/", authRoute);
