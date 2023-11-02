@@ -162,6 +162,7 @@ const TableData = () => {
         <div>
       {/* <Button onClick={goBack}>Go Back</Button> */}
       <h1>Data</h1>
+      <div style={{overflowX: 'auto'}}>
       <Table striped bordered hover variant="dark">
         <thead>
           <tr>
@@ -188,6 +189,7 @@ const TableData = () => {
           ))}
         </tbody>
       </Table>
+      </div>
 
     
       <div className="position-fixed top-0 end-0 m-5 p-5">

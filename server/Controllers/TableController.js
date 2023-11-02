@@ -20,7 +20,7 @@ module.exports.SaveData = async (req, res, next) => {
 
 module.exports.getTableData = async (req, res) => {
   try {
-    const tableData = await Table.find().sort({createdAt: -1});
+    const tableData = await Table.find().sort({createdAt: 1});
 
     res.status(200).json({tableData}); // passing as a response
   } catch (error){
