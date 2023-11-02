@@ -38,6 +38,7 @@ function Header() {
         <Navbar.Brand href="#home">Your App Name</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
+        <div className="d-lg-flex justify-content-between w-100">
           <Button variant="outline-secondary" onClick={handleDashboard} className="me-auto">
             Dashboard
           </Button>
@@ -48,6 +49,7 @@ function Header() {
             <Button variant="outline-danger" onClick={handleLogout}>
               Logout
             </Button>
+          </div>
           </div>
         </Navbar.Collapse>
       </Container>
