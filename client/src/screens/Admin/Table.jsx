@@ -192,7 +192,7 @@ const TableData = () => {
       </div>
     
 
-      <div className="position-fixed top-0 end-0 m-5 p-5" style={{ zIndex: 1000, background: 'rgba(255, 255, 255, 0.8)' }}>
+      <div className="position-fixed bottom-0 end-0 m-5 p-5" style={{ zIndex: 1000, background: 'rgba(255, 255, 255, 0.8)' }}>
           <Row>
             <Col><Button size="sm" onClick={handleShow}>Add Data</Button></Col>
           </Row>      
