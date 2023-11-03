@@ -7,7 +7,7 @@ function Header() {
     const navigate = useNavigate();
     const [cookies, removeCookie] = useCookies([]);
 
-    // useEffect(() => {
+// useEffect(() => {
     //     const verifyCookie = async () => {
     //       if (!cookies.token) {
     //         navigate("/login");
@@ -34,28 +34,30 @@ function Header() {
 
   return (
     <Navbar bg="info" expand="lg">
-      <Container>
-        <Navbar.Brand href="#home">Your App Name</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-        <div className="d-flex w-100 justify-content-between">
+  <Container>
+    <Navbar.Brand href="#home">Your App Name</Navbar.Brand>
+    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+    <Navbar.Collapse id="basic-navbar-nav">
+      <div className="d-flex w-100 justify-content-between">
         {/* Left-aligned button for larger screens */}
         <Button variant="outline-secondary" onClick={handleDashboard} className="d-none d-lg-block">
           Dashboard
         </Button>
 
-        {/* Centered buttons for mobile view */}
-        <div className="d-lg-none d-flex justify-content-center w-100">
-          <Button variant="outline-secondary" onClick={handleDashboard} className="me-2">
-            Dashboard
-          </Button>
-          <Button variant="outline-primary" onClick={handleGoBack} className="me-2">
-            Go Back
-          </Button>
-          <Button variant="outline-danger" onClick={handleLogout}>
-            Logout
-          </Button>
-        </div>
+        {/* Centered "Dashboard" button for mobile view */}
+        <Button variant="outline-secondary" onClick={handleDashboard} className="d-lg-none me-2">
+          Dashboard
+        </Button>
+
+        {/* Centered "Go Back" button for mobile view */}
+        <Button variant="outline-primary" onClick={handleGoBack} className="d-lg-none me-2">
+          Go Back
+        </Button>
+
+        {/* Centered "Logout" button for mobile view */}
+        <Button variant="outline-danger" onClick={handleLogout} className="d-lg-none">
+          Logout
+        </Button>
 
         {/* Right-aligned buttons for larger screens */}
         <div className="d-none d-lg-flex">
@@ -67,9 +69,10 @@ function Header() {
           </Button>
         </div>
       </div>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    </Navbar.Collapse>
+  </Container>
+</Navbar>
+
   );
 }
 
