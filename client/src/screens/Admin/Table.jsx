@@ -192,11 +192,11 @@ const TableData = () => {
       </div>
     
 
-      <div className="position-fixed top-0 end-0 m-5 p-5">
+      {/* <div className="position-fixed top-0 end-0 m-5 p-5">
           <Row>
             <Col><Button size="sm" onClick={handleShow}>Add Data</Button></Col>
           </Row>      
-      </div>
+      </div> */}
       
     </div>
         </Col>
