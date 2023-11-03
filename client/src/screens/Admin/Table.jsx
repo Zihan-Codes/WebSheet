@@ -166,7 +166,7 @@ const TableData = () => {
       <Table striped bordered hover variant="dark">
         <thead>
           <tr>
-            <th className="fixed-col"></th>
+            <th className="fixed-col">num</th>
             <th>Column1</th>
             <th>Column2</th>
             <th>Column3</th>
@@ -178,7 +178,7 @@ const TableData = () => {
         <tbody>
           {tables.map((table, index) => (
             <tr key={table._id}>
-              <td>{index + 1}</td>
+              <td className="fixed-col">{index + 1}</td>
               <td>{table.col1}</td>
               <td>{table.col2}</td>
               <td>{table.col3}</td>
