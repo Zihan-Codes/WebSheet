@@ -166,7 +166,7 @@ const TableData = () => {
       <Table striped bordered hover variant="dark">
         <thead>
           <tr>
-            <th></th>
+            <th className="fixed-col"></th>
             <th>Column1</th>
             <th>Column2</th>
             <th>Column3</th>
