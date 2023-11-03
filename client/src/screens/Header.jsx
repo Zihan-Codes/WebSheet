@@ -6,6 +6,7 @@ import {useCookies} from "react-cookie";
 function Header() {
     const navigate = useNavigate();
     const [cookies, removeCookie] = useCookies([]);
+    document.cookie = "token=myToken; SameSite=None; Secure";
 
 // useEffect(() => {
     //     const verifyCookie = async () => {
