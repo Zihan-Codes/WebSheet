@@ -11,3 +11,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.fixed-col {
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  /* background-color: #333; */
+  /* color: white; */
+  z-index: 1; /* Ensure the fixed column stays on top of other columns */
+}
