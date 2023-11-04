@@ -121,26 +121,26 @@ const Dashboard = () => {
           <Form>
           <Form.Group className="mt-3" controlId="formCol1">
               <Form.Label>Full Name</Form.Label>
-              <Form.Control type="text" placeholder="Enter data" value={fullname} onChange={(e) => {setFullname(e.target.value); handleOnChange();}} required />
+              <Form.Control type="text" placeholder="Enter data" value={fullname} onChange={(e) => {setFullname(e.target.value); handleOnChange}} required />
             </Form.Group>
             <Form.Group className="mt-3" controlId="formCol1">
               <Form.Label>Username</Form.Label>
-              <Form.Control type="text" placeholder="Enter data" value={username} onChange={(e) => {setUsername(e.target.value); handleOnChange();}} required />
+              <Form.Control type="text" placeholder="Enter data" value={username} onChange={(e) => {setUsername(e.target.value); handleOnChange}} required />
             </Form.Group>
             <Form.Group className="mt-2">
               <p className="text-center text-danger font-weight-bold">{usernameError}</p>
             </Form.Group>
             <Form.Group className="mt-3" controlId="formCol2">
               <Form.Label>Role</Form.Label>
-              <Form.Control type="text" placeholder="Enter data" value={role} onChange={(e) => {setRole(e.target.value); handleOnChange();}} required />
+              <Form.Control type="text" placeholder="Enter data" value={role} onChange={(e) => {setRole(e.target.value); handleOnChange}} required />
             </Form.Group>
             <Form.Group className="mt-3" controlId="formCol3">
               <Form.Label>Password</Form.Label>
-              <Form.Control type="text" placeholder="Enter data" value={password} onChange={(e) => {setPassword(e.target.value); handleOnChange();}} required />
+              <Form.Control type="text" placeholder="Enter data" value={password} onChange={(e) => {setPassword(e.target.value); handleOnChange}} required />
             </Form.Group>
             <Form.Group className="mt-3" controlId="formCol3">
               <Form.Label>Confirm Password</Form.Label>
-              <Form.Control type="text" placeholder="Enter data" value={cpassword} onChange={(e) => {setCpassword(e.target.value); handleOnChange();}} required />
+              <Form.Control type="text" placeholder="Enter data" value={cpassword} onChange={(e) => {setCpassword(e.target.value); handleOnChange}} required />
             </Form.Group>
             <Form.Group className="mt-2">
               <p className="text-center text-danger font-weight-bold">{cpasswordError}</p>
