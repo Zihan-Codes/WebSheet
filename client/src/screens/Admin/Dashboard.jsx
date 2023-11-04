@@ -204,7 +204,7 @@ const Dashboard = () => {
               <td>{user.username}</td>
               <td>{user.role}</td>
               <td><Button variant="danger" size="sm" onClick={() => deleteUser(user._id)}>Delete</Button></td>
-              {/* <td><Button size="sm" onClick={() => handleEdit(user._id)}>Edit</Button></td> */}
+              {/* <td><Button size="sm" onClick={() => handleEdit(user._id)}>Editt</Button></td> */}
             </tr>
           ))}
         </tbody>
