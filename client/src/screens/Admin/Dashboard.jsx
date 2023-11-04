@@ -59,7 +59,6 @@ const Dashboard = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setShow(false);
     
     try {
       if(password === cpassword) {
@@ -70,6 +69,8 @@ const Dashboard = () => {
         const { success, message } = data;
       if (success) {
         console.log("users saved");
+
+        setShow(false);
 
         setFullname(null);
         setUsername(null);
