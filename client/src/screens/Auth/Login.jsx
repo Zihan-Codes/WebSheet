@@ -18,7 +18,7 @@ const Login = () => {
     const { name, value } = e.target;
     
     setPasswordError("");
-    
+
     setInputValue({
       ...inputValue,
       [name]: value,
@@ -53,19 +53,16 @@ const Login = () => {
       } else {
         console.log(message);
         setPasswordError(message);
-        setInputValue({
-          username: "",
-          password: "",
-        });
+        
       }
     } catch (error) {
       console.log(error);
     }
 
-    setInputValue({
-      username: "",
-      password: "",
-    });
+    // setInputValue({
+    //   username: "",
+    //   password: "",
+    // });
   };
 
 
