@@ -1,4 +1,4 @@
-const { Signup, Login, getAllUsers } = require("../Controllers/AuthController");
+const { Signup, Login, getAllUsers, deleteUsers } = require("../Controllers/AuthController");
 
 const { userVerification } = require("../Middlewares/AuthMiddleware");
 
@@ -8,5 +8,6 @@ router.post("/", userVerification);
 router.post("/signup", Signup);
 router.post("/login", Login);
 router.get("/get-users", getAllUsers);
+router.delete("/delete-user/:id", deleteUsers);
 
 module.exports = router;

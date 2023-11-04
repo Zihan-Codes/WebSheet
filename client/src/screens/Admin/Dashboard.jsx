@@ -106,6 +106,21 @@ const Dashboard = () => {
     setUserError("");
     setUsernameError("");
   }
+
+  const deleteUser = async (userId) => {
+    console.log("delete called" + userId)
+    try {
+      console.log("starting")
+      // await axios.delete(`/api/delete-user/${userId}`);
+      // await axios.delete("http://localhost:4000/delete-user", userId);
+      await axios.delete(`https://web-sheet.vercel.app/delete-user/${userId}`);
+
+      console.log('User deleted successfully');
+      fetchUsers();
+    } catch (error) {
+      console.error('Error deleting user:', error);
+    }
+  };
   
   
 
@@ -177,6 +192,7 @@ const Dashboard = () => {
             <th>Full Name</th>
             <th>Username</th>
             <th>Role</th>
+            <th>Action</th>
             {/* <th>Edit</th> */}
           </tr>
         </thead>
@@ -187,6 +203,7 @@ const Dashboard = () => {
               <td>{user.fullname}</td>
               <td>{user.username}</td>
               <td>{user.role}</td>
+              <td><Button variant="danger" size="sm" onClick={() => deleteUser(user._id)}>Delete</Button></td>
               {/* <td><Button size="sm" onClick={() => handleEdit(user._id)}>Edit</Button></td> */}
             </tr>
           ))}
