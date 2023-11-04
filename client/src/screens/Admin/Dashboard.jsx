@@ -8,10 +8,14 @@ const Dashboard = () => {
   const [users, setUsers] = useState([]);
 
   const [username, setUsername] = useState("");
+  const [usernameError, setUsernameError] = useState("");
   const [fullname, setFullname] = useState("");
   const [role, setRole] = useState("");
   const [password, setPassword] = useState("");
+  const [passwordError, setPasswordError] = useState("");
   const [cpassword, setCpassword] = useState("");
+  const [cpasswordError, setCpasswordError] = useState("");
+  const [userError, setUserError] = useState("");
 
   const [show, setShow] = useState(false);
 
@@ -77,9 +81,12 @@ const Dashboard = () => {
         
       } else {
         console.log("not saved")
+        console.log(message);
+        setUserError(message);
       }
       }else {
-        alert("password not match");
+        // alert("password not match");
+        setCpasswordError("password and confirm password does not match");
       }
       
 
@@ -104,23 +111,32 @@ const Dashboard = () => {
           <Form>
           <Form.Group className="mt-3" controlId="formCol1">
               <Form.Label>Full Name</Form.Label>
-              <Form.Control type="text" placeholder="Enter data" value={fullname} onChange={(e) => setFullname(e.target.value)} />
+              <Form.Control type="text" placeholder="Enter data" value={fullname} onChange={(e) => setFullname(e.target.value)} required />
             </Form.Group>
             <Form.Group className="mt-3" controlId="formCol1">
               <Form.Label>Username</Form.Label>
-              <Form.Control type="text" placeholder="Enter data" value={username} onChange={(e) => setUsername(e.target.value)} />
+              <Form.Control type="text" placeholder="Enter data" value={username} onChange={(e) => setUsername(e.target.value)} required />
+            </Form.Group>
+            <Form.Group className="mt-2">
+              <p className="text-center">{usernameError}</p>
             </Form.Group>
             <Form.Group className="mt-3" controlId="formCol2">
               <Form.Label>Role</Form.Label>
-              <Form.Control type="text" placeholder="Enter data" value={role} onChange={(e) => setRole(e.target.value)} />
+              <Form.Control type="text" placeholder="Enter data" value={role} onChange={(e) => setRole(e.target.value)} required />
             </Form.Group>
             <Form.Group className="mt-3" controlId="formCol3">
               <Form.Label>Password</Form.Label>
-              <Form.Control type="text" placeholder="Enter data" value={password} onChange={(e) => setPassword(e.target.value)} />
+              <Form.Control type="text" placeholder="Enter data" value={password} onChange={(e) => setPassword(e.target.value)} required />
             </Form.Group>
             <Form.Group className="mt-3" controlId="formCol3">
               <Form.Label>Confirm Password</Form.Label>
-              <Form.Control type="text" placeholder="Enter data" value={cpassword} onChange={(e) => setCpassword(e.target.value)} />
+              <Form.Control type="text" placeholder="Enter data" value={cpassword} onChange={(e) => setCpassword(e.target.value)} required />
+            </Form.Group>
+            <Form.Group className="mt-2">
+              <p className="text-center">{cpasswordError}</p>
+            </Form.Group>
+            <Form.Group className="mt-2">
+              <p className="text-center">{userError}</p>
             </Form.Group>
             
 
