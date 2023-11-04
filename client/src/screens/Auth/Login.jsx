@@ -48,7 +48,12 @@ const Login = () => {
         
         
       } else {
-        console.log(message)
+        console.log(message);
+        setPasswordError(message);
+        setInputValue({
+          username: "",
+          password: "",
+        });
       }
     } catch (error) {
       console.log(error);
@@ -81,6 +86,10 @@ const Login = () => {
               <Form.Label>Password</Form.Label>
               <Form.Control type="password" name="password" onChange={handleOnChange} placeholder="Password" required />
             </Form.Group>
+            <Form.Group className="mt-2">
+            <p className="text-center text-danger font-weight-bold">{passwordError}</p>
+            </Form.Group>
+            
             <Form.Group className="text-center mt-3">
             <Button variant="primary" type="submit" className="login-button w-50">
               Login
