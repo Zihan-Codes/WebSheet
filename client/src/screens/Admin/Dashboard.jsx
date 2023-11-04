@@ -60,6 +60,7 @@ const Dashboard = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     
+    
     try {
       if(password === cpassword) {
         const inputData = {username: username, role: role, password: password, fullname: fullname};
@@ -83,7 +84,8 @@ const Dashboard = () => {
       } else {
         console.log("not saved")
         console.log(message);
-        setUserError(message);
+        // setUserError(message);
+        setUsernameError(message);
       }
       }else {
         // alert("password not match");
@@ -119,7 +121,7 @@ const Dashboard = () => {
               <Form.Control type="text" placeholder="Enter data" value={username} onChange={(e) => setUsername(e.target.value)} required />
             </Form.Group>
             <Form.Group className="mt-2">
-              <p className="text-center">{usernameError}</p>
+              <p className="text-center text-danger font-weight-bold">{usernameError}</p>
             </Form.Group>
             <Form.Group className="mt-3" controlId="formCol2">
               <Form.Label>Role</Form.Label>
@@ -134,10 +136,10 @@ const Dashboard = () => {
               <Form.Control type="text" placeholder="Enter data" value={cpassword} onChange={(e) => setCpassword(e.target.value)} required />
             </Form.Group>
             <Form.Group className="mt-2">
-              <p className="text-center">{cpasswordError}</p>
+              <p className="text-center text-danger font-weight-bold">{cpasswordError}</p>
             </Form.Group>
             <Form.Group className="mt-2">
-              <p className="text-center">{userError}</p>
+              <p className="text-center text-danger font-weight-bold">{userError}</p>
             </Form.Group>
             
 
