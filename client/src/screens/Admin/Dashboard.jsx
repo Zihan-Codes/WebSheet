@@ -59,7 +59,9 @@ const Dashboard = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+    if(fullname=="" || username=="" || role=="" || password==""){
+      setUserError("All field are required");
+    }
     
     try {
       if(password === cpassword) {

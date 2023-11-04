@@ -81,7 +81,7 @@ module.exports.Login = async (req, res, next) => {
 
 module.exports.getAllUsers = async (req, res) => {
   try {
-    const allusers = await User.find().sort({createdAt: -1});
+    const allusers = await User.find().sort({createdAt: 1});
 
     res.status(200).json({allusers}); // passing as a response
   } catch (error){
