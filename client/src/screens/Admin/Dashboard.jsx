@@ -49,7 +49,7 @@ const Dashboard = () => {
       const { data } = response;
       // console.log(data);
       // console.log(data.tabledata)
-      // console.log(data.tabledata.col1)
+      // console.log(data.tabledata.col1);
     
       setShow(true);
     }catch (error){
