@@ -72,13 +72,13 @@ module.exports.deleteData = async (req, res) => { // admin deleting the user
     
     const deletedData = await Table.findByIdAndDelete(dataId);
     
-    if (!deletedUser) {
-      return res.status(404).json({ message: 'User not found' });
+    if (!deletedData) {
+      return res.status(404).json({ message: 'Data not found' });
     }
     
 
-    return res.status(200).json({ message: 'User deleted successfully' });
+    return res.status(200).json({ message: 'Data deleted successfully' });
   } catch (error) {
-    return res.status(500).json({ message: 'Error deleting user', error });
+    return res.status(500).json({ message: 'Error deleting data', error });
   }
 };
