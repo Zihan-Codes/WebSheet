@@ -107,17 +107,17 @@ const Dashboard = () => {
     setUsernameError("");
   }
 
-  // const deleteUser = async (userId) => {
-  //   try {
+  const deleteUser = async (userId) => {
+    try {
       
-  //     await axios.delete(`https://web-sheet.vercel.app/delete-user/${userId}`);
+      await axios.delete(`https://web-sheet.vercel.app/delete-user/${userId}`);
 
-  //     console.log('User deleted successfully');
-  //     fetchUser();
-  //   } catch (error) {
-  //     console.error('Error deleting user:', error);
-  //   }
-  // };
+      console.log('User deleted successfully');
+      fetchUser();
+    } catch (error) {
+      console.error('Error deleting user:', error);
+    }
+  };
   
   
 
@@ -189,7 +189,7 @@ const Dashboard = () => {
             <th>Full Name</th>
             <th>Username</th>
             <th>Role</th>
-            {/* <th>Action</th> */}
+            <th>Action</th>
             {/* <th>Edit</th> */}
           </tr>
         </thead>
@@ -200,7 +200,7 @@ const Dashboard = () => {
               <td>{user.fullname}</td>
               <td>{user.username}</td>
               <td>{user.role}</td>
-              {/* <td><Button variant="danger" size="sm" onClick={() => deleteUser(user._id)}>Delete</Button></td> */}
+              <td><Button variant="danger" size="sm" onClick={() => deleteUser(user._id)}>Delete</Button></td>
               {/* <td><Button variant="danger" size="sm">Delete</Button></td> */}
               {/* <td><Button size="sm" onClick={() => handleEdit(user._id)}>Editt</Button></td> */}
             </tr>
