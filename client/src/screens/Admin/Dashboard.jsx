@@ -181,7 +181,7 @@ const Dashboard = () => {
         <Col xs={12} md={12}>
         <div>
       {/* <Button onClick={goBack}>Go Back</Button> */}
-      <h1>User List</h1>
+      <h1>User Listt</h1>
       <Table striped bordered hover variant="dark">
         <thead>
           <tr>
