@@ -189,7 +189,7 @@ const Dashboard = () => {
             <th>Full Name</th>
             <th>Username</th>
             <th>Role</th>
-            <th>Action</th>
+            {/* <th>Action</th> */}
             {/* <th>Edit</th> */}
           </tr>
         </thead>
@@ -201,7 +201,7 @@ const Dashboard = () => {
               <td>{user.username}</td>
               <td>{user.role}</td>
               {/* <td><Button variant="danger" size="sm" onClick={() => deleteUser(user._id)}>Delete</Button></td> */}
-              <td><Button variant="danger" size="sm">Delete</Button></td>
+              {/* <td><Button variant="danger" size="sm">Delete</Button></td> */}
               {/* <td><Button size="sm" onClick={() => handleEdit(user._id)}>Editt</Button></td> */}
             </tr>
           ))}
