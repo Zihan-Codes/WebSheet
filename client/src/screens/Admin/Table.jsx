@@ -102,11 +102,21 @@ const TableData = () => {
         console.log("not saved")
       }
       }
-      
-      
 
     } catch (error) {
       console.log(error);
+    }
+  };
+
+  const deleteData = async (userId) => {
+    try {
+      
+      await axios.delete(`https://web-sheet.vercel.app/delete-data/${dataId}`);
+
+      console.log('User deleted successfully');
+      fetchTable();
+    } catch (error) {
+      console.error('Error deleting user:', error);
     }
   };
   
@@ -173,6 +183,7 @@ const TableData = () => {
             <th>Column4</th>
             <th>Column5</th>
             <th>Edit</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>
@@ -185,6 +196,7 @@ const TableData = () => {
               <td>{table.col4}</td>
               <td>{table.col5}</td>
               <td><Button size="sm" onClick={() => handleEdit(table._id)}>Edit</Button></td>
+              <td><Button variant="danger" size="sm" onClick={() => deleteData(table._id)}>Delete</Button></td>
             </tr>
           ))}
         </tbody>

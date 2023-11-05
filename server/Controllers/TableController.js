@@ -62,3 +62,23 @@ module.exports.updateRow = async (req, res) => {
     res.status(500).json({message: "Internal Server Error"});
   }
 };
+
+module.exports.deleteData = async (req, res) => { // admin deleting the user
+  try {
+    const dataId = req.params.id;
+
+    const datas = await Table.findById(dataId);
+
+    
+    const deletedData = await Table.findByIdAndDelete(dataId);
+    
+    if (!deletedUser) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+    
+
+    return res.status(200).json({ message: 'User deleted successfully' });
+  } catch (error) {
+    return res.status(500).json({ message: 'Error deleting user', error });
+  }
+};

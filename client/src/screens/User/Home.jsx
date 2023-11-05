@@ -43,6 +43,7 @@ const Uhome = () => {
         <div>
       {/* <Button onClick={goBack}>Go Back</Button> */}
       <h1>Data</h1>
+      <div style={{overflowX: 'auto'}}>
       <Table striped bordered hover variant="dark">
         <thead>
           <tr>
@@ -67,6 +68,7 @@ const Uhome = () => {
           ))}
         </tbody>
       </Table>
+      </div>
       
     </div>
         </Col>
