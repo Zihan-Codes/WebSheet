@@ -108,11 +108,8 @@ const Dashboard = () => {
   }
 
   const deleteUser = async (userId) => {
-    console.log("delete called" + userId)
     try {
-      console.log("starting")
-      // await axios.delete(`/api/delete-user/${userId}`);
-      // await axios.delete("http://localhost:4000/delete-user", userId);
+      
       await axios.delete(`https://web-sheet.vercel.app/delete-user/${userId}`);
 
       console.log('User deleted successfully');
