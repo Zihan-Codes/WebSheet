@@ -108,7 +108,7 @@ const TableData = () => {
     }
   };
 
-  const deleteData = async (userId) => {
+  const deleteData = async (dataId) => {
     try {
       
       await axios.delete(`https://web-sheet.vercel.app/delete-data/${dataId}`);
