@@ -116,7 +116,7 @@ const Dashboard = () => {
       await axios.delete(`https://web-sheet.vercel.app/delete-user/${userId}`);
 
       console.log('User deleted successfully');
-      fetchUsers();
+      fetchUser();
     } catch (error) {
       console.error('Error deleting user:', error);
     }

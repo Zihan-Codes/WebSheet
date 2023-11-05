@@ -108,4 +108,4 @@ module.exports.deleteUsers = async (req, res) => { // admin deleting the user
   } catch (error) {
     return res.status(500).json({ message: 'Error deleting user', error });
   }
-}
+};
