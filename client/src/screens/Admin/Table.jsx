@@ -110,9 +110,8 @@ const TableData = () => {
 
   const deleteData = async (dataId) => {
     try {
-      console.log("deleing but dont know")
       
-      await axios.delete(`https://web-sheet.vercel.app/delete-data/${dataId}`);
+      await axios.delete(`https://web-sheet.vercel.app/tb/delete-data/${dataId}`);
 
       console.log('Data deleted successfully');
       fetchTable();
