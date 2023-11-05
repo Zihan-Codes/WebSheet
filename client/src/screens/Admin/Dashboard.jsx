@@ -107,17 +107,17 @@ const Dashboard = () => {
     setUsernameError("");
   }
 
-  const deleteUser = async (userId) => {
-    try {
+  // const deleteUser = async (userId) => {
+  //   try {
       
-      await axios.delete(`https://web-sheet.vercel.app/delete-user/${userId}`);
+  //     await axios.delete(`https://web-sheet.vercel.app/delete-user/${userId}`);
 
-      console.log('User deleted successfully');
-      fetchUser();
-    } catch (error) {
-      console.error('Error deleting user:', error);
-    }
-  };
+  //     console.log('User deleted successfully');
+  //     fetchUser();
+  //   } catch (error) {
+  //     console.error('Error deleting user:', error);
+  //   }
+  // };
   
   
 
